@@ -1,0 +1,191 @@
+/**
+ *
+ * Main container
+ *
+ */
+#addToHomeScreen {
+	z-index:9999;
+	-webkit-user-select:none;
+	user-select:none;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-touch-callout:none;
+	touch-callout:none;
+	width:240px;
+	font-size:15px;
+	padding:20px;
+	text-align:left;
+	font-family:helvetica;
+	background-image:-webkit-gradient(linear,0 0,0 100%,color-stop(0,#fff),color-stop(0.02,#eee),color-stop(0.98,#ccc),color-stop(1,#a3a3a3));
+	border:1px solid #505050;
+	-webkit-border-radius:8px;
+	-webkit-background-clip:padding-box;
+	color:#333;
+	text-shadow:0 1px 0 rgba(255,255,255,0.75);
+	line-height:1.6em;
+	-webkit-box-shadow:0 0 4px rgba(0,0,0,0.5);
+}
+
+#addToHomeScreen.addToHomeIOS7 {
+	background:#f2f2f2 !important;
+	-webkit-border-radius:1px !important;
+	border:1px solid #ccc;
+	-webkit-box-shadow:0 0 4px rgba(0,0,0,0.2);
+}
+
+#addToHomeScreen.addToHomeIpad {
+	width:268px;
+	font-size:18px;
+	padding:14px;
+}
+
+/**
+ *
+ * The 'wide' class is added when the popup contains the touch icon
+ *
+ */
+#addToHomeScreen.addToHomeWide {
+	width:296px;
+}
+
+#addToHomeScreen.addToHomeIpad.addToHomeWide {
+	width:320px;
+	font-size:18px;
+	padding:14px;
+}
+
+/**
+ *
+ * The balloon arrow
+ *
+ */
+#addToHomeScreen .addToHomeArrow {
+	position:absolute;
+	background-image:-webkit-gradient(linear,0 0,100% 100%,color-stop(0,rgba(204,204,204,0)),color-stop(0.4,rgba(204,204,204,0)),color-stop(0.4,#ccc));
+	border-width:0 1px 1px 0;
+	border-style:solid;
+	border-color:#505050;
+	width:16px; height:16px;
+	-webkit-transform:rotateZ(45deg);
+	bottom:-9px;
+	left:50%;
+	margin-left:-8px;
+	-webkit-box-shadow:inset -1px -1px 0 #a9a9a9;
+	-webkit-border-bottom-right-radius:2px;
+}
+
+#addToHomeScreen.addToHomeIOS7 .addToHomeArrow {
+	background-image:-webkit-gradient(linear,0 0,100% 100%,color-stop(0,rgba(204,204,204,0)),color-stop(0.4,rgba(204,204,204,0)),color-stop(0.4,#f2f2f2)) !important;
+	-webkit-box-shadow:inset -1px -1px 0 #fff !important;
+	border-color:#ccc !important;
+}
+
+/**
+ *
+ * The balloon arrow for iPad
+ *
+ */
+#addToHomeScreen.addToHomeIpad .addToHomeArrow {
+	-webkit-transform:rotateZ(-135deg);
+	background-image:-webkit-gradient(linear,0 0,100% 100%,color-stop(0,rgba(238,238,238,0)),color-stop(0.4,rgba(238,238,238,0)),color-stop(0.4,#eee));
+	-webkit-box-shadow:inset -1px -1px 0 #fff;
+	top:-9px; bottom:auto; left:50%;
+}
+
+
+/**
+ *
+ * Close button
+ *
+ */
+#addToHomeScreen .addToHomeClose {
+	-webkit-box-sizing:border-box;
+	position:absolute;
+	right:4px;
+	top:4px;
+	width:18px;
+	height:18px; line-height:14px;
+	text-align:center;
+	text-indent:1px;
+	-webkit-border-radius:9px;
+	background:rgba(0,0,0,0.12);
+	color:#888;
+	-webkit-box-shadow:0 1px 0 #fff;
+	font-size:16px;
+}
+
+#addToHomeScreen.addToHomeIOS7 .addToHomeClose {
+	line-height:12px;
+	padding-right:1px;
+	background:transparent;
+	border: 1px solid #888;
+	-webkit-box-shadow:none;
+}
+
+/**
+ *
+ * The '+' icon, displayed only on iOS < 4.2
+ *
+ */
+#addToHomeScreen .addToHomePlus {
+	font-weight:bold;
+	font-size:1.3em;
+}
+
+#addToHomeScreen .addToHomeadd {
+	display:inline-block;
+	width:16px;
+	height: 16px;
+	background-repeat:no-repeat;
+	background-image:url('data:image/png;base64,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');
+	background-size:16px 16px;
+	text-indent:-9999em;
+	overflow:hidden;
+}
+
+
+/**
+ *
+ * The 'share' icon, displayed only on iOS >= 4.2
+ *
+ */
+#addToHomeScreen .addToHomeShare {
+	display:inline-block;
+	width:18px;
+	height:15px;
+	background-repeat:no-repeat;
+	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAeCAQAAADu6HTYAAADPElEQVR4Xq3TX2gcRRzA8e/M7mVv2+TSNpc/TZtrY6jUGqgaSAmEChKLrYK0YH0RFC2CSCkEfCghiKU04J8qNigq6os+iQV98MHWFwVBrQQRWs21lBw5cw3NNb1/udu72RGG5Y77IzXW77D7sAwf5scyYoL6BGXSDKFZwaGpLvIUaeoCkvX1MmsM0Ny6oRSQYOLuIS+YZOpfQdqslpUxcZrzTVAz4qPwW2O3CeIwC/RSzeY6Ow1QhUrkr+YOWfEKDkEP8Rij7CHKJmrFSDHBdwGEE5wiGChPN+PnT8VdRtEIl1d4gRj/1EVe5ZSBKGh8iqQpo/Fo5+3C/gz0MYg4zgwbqday1/Q4B8BGQ45d/Hi54lakCrU5obOcidJpu1+Lg9whjabyaOYLnrIBFFaRD+xe2ybMDWY66GmP/WA9cGfGp0CWhy0wkMN8inepFiH2rV1j0NQSNQbFLRQnS8/8YSDBBpadfv4CYDub2fmeHDNAsL1MBWUel0iA+Xik6eHcyvD3vAMSU1TGuA/YRS+dD7ovCQN43GKRFCU20Kd3V/avDVVyAZ5niTEuLA5/zBGWg9EEEhfJKN200Tat8CmRAQb9+wv7soPlHt2tQorsz1uPbr0HTY4sJwrH47zJZwABBAKLMBoQXepwgTwdHCo+fXMkQ4lrxEmQ5AaXipPqDY9V2vn09tgvTPI71EEGYxM+/uMJLJ4svpgaWGKOi/xKgmqLSUGSUd5f2vIVJ/CgBaTIUsZ7ZBsn0+NzfMOXLFCXQyTcybN6ep5ZZgUOHn7jpfUpsZshdugPGf+E5zjbyHTSRyQ8xfRPPM/s63RHeuknSoT22mjmmnAOIMkUZ6D1xSfPPAfd1WFKM3sO2CMaHx8M1NjnXKHaAGGkOW0C02WeYHUz4qMtx+w5gUDS8NckYe5lHsMYwCZEPyEEmjLDZFmAS7CDviMdxyTkMNVBKEmYLvbiQQBIBBbCQG04bGQvFWz6CfsCQLWCigILFwcfkGYBiOpbYuOizTAyYyDdCtrGaRG1LCkIgMYEFhI0WqQZoSlbGRyHKe4qOx7iv2bVQW9dp4dlM/x6kmwnWQcd/Q3FCqwTEiT5s+6D5v/pb0SSHyg7uhMWAAAAAElFTkSuQmCC);
+	background-size:18px 15px;
+	text-indent:-9999em;
+	overflow:hidden;
+}
+
+#addToHomeScreen.addToHomeIOS7 .addToHomeShare {
+	width:11px;
+	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAA8CAYAAAAQTCjdAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAASCQAAEgkB80sG3AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKjSURBVGiB7dpPiFVVHMDxz7m9NCtMyI2bEJEC25WrEkzHUXCRraIwdNE8ZxfYIlcis1ZEbGEzT1QCF4XgH1CyWhUoJKIWNRGEiCNKmkSiYTzfcfGuOokx77x3ZlS8382959zfn+/invvn3RdijHIRBrwkOINCYXEcdjpb7VyiYdBsLScwt5y6IloYdzqXo36Ro0gY9IKWo+5JwmzBt2HQnBw9ehYNazyn5TBee8Dh+Vq+CWu92GufnkTDR6ab7gDeBNHouMM/l9tXTXM0fGBmL726Fg1Dam74EsvKqR8VNowL2Yzj5f7rnnE4DHq2235diYYhhTGfC94up35T0y+6di/ITU0rKVd+sEi0P7xr2pSJOu8zvF+OzqEv7vDH/WFxt7/cshy/ticsN8sXYUht0kXDOlsF9XJ4UaEvNoz9X3zc5bKaZThbyr5jzJ4wlNY7KTgM+ES0vhz+KeiPw36fKC/ucAF9uFBOrTZm26SJCtaV27+xIo7cXdkTEhvOoh+XyxprU1qnim7CQdGK2HAyKRexYVShT3RItDElN+mkjiP2Ym+S3f01hv2EVal5WW6hU0ElmptaqJuBpXg6MbeFH2LDpU6CQ93zWIKnEvs0cayGU3glMfkOo1jQYewZzOuyz7FC95Jwo5OgUFfgeg993hh/eTqCTxOSm/iuk8DY0Ap1b2GhtHXxsfZN4j/X0fOx4auEIknEhqv4OiUn1L13Z/+xWfWVaG4q0dxUormpRHNTieamEs1NJZqbJ1Q0jHvdiJo5S2cVjSNOCHZhn3/SnuYnIvl3yomIIz7MXZMn9hydRCrR3FSiualEc1OJ5qYSzU0lmptKNDePjWgwcPePT7/g+4cp8wCW4GXaryK3tL+mLdD5x62ppllgu7bso8q/2HIbzGWdNmWnSJwAAAAASUVORK5CYII=);
+	background-size:11px 15px;
+}
+
+/**
+ *
+ * The touch icon (if available)
+ *
+ */
+#addToHomeScreen .addToHomeTouchIcon {
+	display:block;
+	float:left;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5),
+		inset 0 0 2px rgba(255,255,255,0.9);
+	box-shadow:0 1px 3px rgba(0,0,0,0.5),
+		inset 0 0 2px rgba(255,255,255,0.9);
+	background-repeat:no-repeat;
+	width:57px; height:57px;
+	-webkit-background-size:57px 57px;
+	background-size:57px 57px;
+	margin:0 12px 3px 0;
+	border:1px solid #333;
+	-webkit-background-clip:padding-box;
+	background-clip:padding-box;
+}
