@@ -473,7 +473,8 @@ Warning: This file is not mean to be edited. Please put your custom CSS into you
     bottom: 3em;
     left: 0.9em; }
     .flowplayer .fp-logo img {
-      width: 0%; }
+      width: 0%; 
+      display: none;}
   .flowplayer .fp-captions {
     bottom: 1.2em;
     display: none;
